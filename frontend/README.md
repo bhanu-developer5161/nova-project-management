@@ -1,16 +1,46 @@
-# React + Vite
+# NOVA — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+NOVA is a team productivity and project management platform that helps teams plan, collaborate, and track project work.
 
-Currently, two official plugins are available:
+This folder contains the frontend application built with React and Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+https://nova-project-management-seven.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies
 
-## Expanding the Oxlint configuration
+- React
+- Vite
+- JavaScript
+- React Router
+- Axios
+- CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## ✨ Features
+
+- User registration and login
+- JWT authentication
+- Protected dashboard
+- Project management
+- Task management
+- Team member management
+- Task assignment
+- Task priorities and statuses
+- Project progress tracking
+- Responsive UI
+
+## 📁 Project Structure
+
+```text
+frontend/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── App.jsx
+│   └── main.jsx
+├── public/
+├── .env.production
+├── package.json
+└── vite.config.js
