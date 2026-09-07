@@ -1,0 +1,1357 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.login-card h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-card button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #d32f2f;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 25px;
+  color: #666;
+}
+
+.register-link a {
+  color: #111;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dashboard {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.dashboard-header {
+  background: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.dashboard-header h1 {
+  font-size: 28px;
+}
+
+.dashboard-header p {
+  color: #666;
+  margin-top: 4px;
+}
+
+.logout-button {
+  width: auto !important;
+  padding: 10px 20px !important;
+  background: #111 !important;
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.welcome-section {
+  margin-bottom: 30px;
+}
+
+.welcome-section h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.welcome-section p {
+  color: #666;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h3 {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.stat-card p {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.progress-card {
+  background: white;
+  padding: 30px;
+  margin-top: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-header p {
+  color: #666;
+  margin-top: 5px;
+}
+
+.progress-header strong {
+  font-size: 28px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #e5e5e5;
+  border-radius: 10px;
+  margin-top: 25px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #111;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.dashboard-actions button {
+  width: auto;
+  padding: 12px 20px;
+}
+
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-header {
+    padding: 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-actions {
+    flex-direction: column;
+  }
+
+  .dashboard-actions button {
+    width: 100%;
+  }
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-header h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: #666;
+}
+
+.add-project-button {
+  width: auto !important;
+  padding: 12px 20px !important;
+}
+
+.project-form-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.project-form-card h3 {
+  margin-bottom: 25px;
+}
+
+.project-form-card textarea,
+.project-form-card select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.project-form-card textarea:focus,
+.project-form-card select:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.project-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card-header h3 {
+  font-size: 20px;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  white-space: nowrap;
+  background: #eee;
+}
+
+.project-description {
+  color: #666;
+  line-height: 1.5;
+  min-height: 48px;
+  margin-bottom: 20px;
+}
+
+.project-details {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  color: #555;
+  font-size: 14px;
+}
+
+.project-details p {
+  margin-bottom: 8px;
+}
+
+.delete-button {
+  margin-top: 15px;
+  width: auto !important;
+  padding: 8px 15px !important;
+  background: #f1f1f1 !important;
+  color: #333 !important;
+}
+
+.empty-state {
+  background: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.empty-state h3 {
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: #666;
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .project-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 2fr 1.3fr 1fr 1.2fr 1.2fr 1.2fr auto;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.task-main h3 {
+  margin-bottom: 7px;
+}
+
+.task-main p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.task-project,
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.task-project span,
+.task-info span {
+  color: #888;
+  font-size: 12px;
+}
+
+.task-project strong,
+.task-info strong {
+  font-size: 14px;
+}
+
+.priority {
+  font-size: 12px !important;
+}
+
+.priority.low {
+  color: #555;
+}
+
+.priority.medium {
+  color: #333;
+}
+
+.priority.high {
+  color: #111;
+  font-weight: bold;
+}
+
+.task-status {
+  font-size: 12px !important;
+}
+
+.task-status.todo {
+  color: #555;
+}
+
+.task-status.in-progress {
+  color: #333;
+}
+
+.task-status.completed {
+  color: #111;
+  font-weight: bold;
+}
+
+@media (max-width: 1100px) {
+  .task-card {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .task-main {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .task-card {
+    grid-template-columns: 1fr;
+  }
+
+  .task-main {
+    grid-column: auto;
+  }
+}
+
+.task-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-button {
+  width: auto !important;
+  padding: 8px 15px !important;
+  background: #111 !important;
+  color: white !important;
+}
+
+.task-actions .delete-button {
+  margin-top: 0;
+}
+
+.member-count {
+  padding: 10px 15px;
+  background: white;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.member-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.member-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.member-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.member-info h3 {
+  margin-bottom: 5px;
+}
+
+.member-info p {
+  color: #666;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.member-role {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .member-card {
+    flex-wrap: wrap;
+  }
+}
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f4f7fb;
+}
+
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #111;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.sidebar-logo {
+  margin-bottom: 40px;
+}
+
+.sidebar-logo h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.sidebar-logo p {
+  color: #aaa;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  background: #222;
+  color: white;
+}
+
+.nav-link.active {
+  background: white;
+  color: #111;
+}
+
+.nav-link span {
+  width: 20px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.sidebar-logout {
+  margin-top: auto;
+  width: 100% !important;
+  background: transparent !important;
+  border: 1px solid #444 !important;
+  color: #aaa !important;
+}
+
+.sidebar-logout:hover {
+  background: #222 !important;
+  color: white !important;
+}
+
+.main-content {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  min-height: 100vh;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 70px;
+    padding: 20px 10px;
+  }
+
+  .sidebar-logo h1 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .sidebar-logo p {
+    display: none;
+  }
+
+  .nav-link {
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .nav-link span {
+    font-size: 20px;
+  }
+
+  .nav-link {
+    font-size: 0;
+  }
+
+  .sidebar-logout {
+    font-size: 0;
+  }
+
+  .sidebar-logout::before {
+    content: "↪";
+    font-size: 20px;
+  }
+
+  .main-content {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+  }
+}
+
+/* =========================
+   NOVA Dashboard Polish
+========================= */
+
+.dashboard {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.dashboard-content {
+  padding: 35px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-content h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.dashboard-content > p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Stats */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid #e8edf3;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.stat-card strong {
+  font-size: 30px;
+  color: #111;
+}
+
+/* Progress */
+
+.progress-card {
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  border: 1px solid #e8edf3;
+  margin-bottom: 30px;
+}
+
+.progress-card h3 {
+  margin-bottom: 8px;
+}
+
+.progress-card p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #edf0f4;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 20px;
+  background: #111;
+  transition: width 0.4s ease;
+}
+
+/* Quick actions */
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.quick-action {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 22px;
+  text-decoration: none;
+  color: #111;
+  transition: 0.2s;
+}
+
+.quick-action:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.quick-action h3 {
+  margin-bottom: 6px;
+}
+
+.quick-action p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-content {
+    padding: 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-content h2 {
+    font-size: 24px;
+  }
+}
+
+/* =========================
+   NOVA Projects Polish
+========================= */
+
+.projects-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.projects-content {
+  padding: 35px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.projects-header h2 {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.projects-header p {
+  color: #777;
+}
+
+.create-project-btn {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.create-project-btn:hover {
+  background: #333;
+}
+
+/* Project form */
+
+.project-form {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #e8edf3;
+  margin-bottom: 30px;
+}
+
+.project-form h3 {
+  margin-bottom: 20px;
+}
+
+.project-form input,
+.project-form textarea,
+.project-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #dfe4ea;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.project-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.project-form button {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Project cards */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 24px;
+  transition: 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+
+.project-card p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.project-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.project-meta {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #666;
+}
+
+.project-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.project-actions button {
+  flex: 1;
+  padding: 9px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.project-actions button:hover {
+  background: #f4f4f4;
+}
+
+.project-actions .delete-btn {
+  color: #c62828;
+  border-color: #f0caca;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .projects-content {
+    padding: 20px;
+  }
+
+  .projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   NOVA Tasks Polish
+========================= */
+
+.tasks-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.tasks-content {
+  padding: 35px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.tasks-header h2 {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.tasks-header p {
+  color: #777;
+}
+
+/* Task form */
+
+.task-form {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #e8edf3;
+  margin-bottom: 30px;
+}
+
+.task-form h3 {
+  margin-bottom: 20px;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #dfe4ea;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.task-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.task-form button {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Tasks grid */
+
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.task-card {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 22px;
+  transition: 0.2s;
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.task-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.task-card p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.task-project {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.task-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.task-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  background: #f0f2f5;
+}
+
+.task-status {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  background: white;
+  margin-bottom: 12px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.task-actions button {
+  flex: 1;
+  padding: 9px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.task-actions button:hover {
+  background: #f4f4f4;
+}
+
+.task-actions .delete-btn {
+  color: #c62828;
+  border-color: #f0caca;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .tasks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .tasks-content {
+    padding: 20px;
+  }
+
+  .tasks-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .tasks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   NOVA Team Polish
+========================= */
+
+.team-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.team-content {
+  padding: 35px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.team-header {
+  margin-bottom: 30px;
+}
+
+.team-header h2 {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.team-header p {
+  color: #777;
+}
+
+/* Member count */
+
+.member-count-card {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 25px;
+}
+
+.member-count-card strong {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.member-count-card span {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Members */
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.member-card {
+  background: white;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 24px;
+  transition: 0.2s;
+}
+
+.member-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.member-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.member-card h3 {
+  margin-bottom: 6px;
+}
+
+.member-email {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 15px;
+  word-break: break-word;
+}
+
+.member-role {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #f0f2f5;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .team-content {
+    padding: 20px;
+  }
+
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+}
