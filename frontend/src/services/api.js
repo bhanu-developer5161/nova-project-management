@@ -1,10 +1,13 @@
 import axios from "axios";
 
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://127.0.0.1:8000/api";
+
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8000/api",
+  baseURL: API_URL,
 });
 
-// Add access token to every request
+// Add JWT access token to requests
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("access_token");
 
@@ -15,7 +18,7 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// Automatically refresh expired access token
+// Refresh access token when it expires
 api.interceptors.response.use(
   (response) => response,
 
@@ -33,7 +36,7 @@ api.interceptors.response.use(
         const refreshToken = localStorage.getItem("refresh_token");
 
         const response = await axios.post(
-          "http://127.0.0.1:8000/api/auth/refresh/",
+          `${API_URL}/auth/refresh/`,
           {
             refresh: refreshToken,
           }
@@ -43,7 +46,8 @@ api.interceptors.response.use(
 
         localStorage.setItem("access_token", newAccessToken);
 
-        originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
+        originalRequest.headers.Authorization =
+          `Bearer ${newAccessToken}`;
 
         return api(originalRequest);
       } catch (refreshError) {
